@@ -7,7 +7,7 @@
     "build": "webpack"
   },
   "keywords": [
-    "marquee",
+    "flipclock",
     "simple",
     "react"
   ],

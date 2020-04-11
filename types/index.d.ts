@@ -1,9 +1,11 @@
-import { CSSProperties, ComponentType } from 'react'
+import { CSSProperties, ComponentType } from "react";
 
-interface MarqueeProps {
-  speed?: number;
-  style?: CSSProperties
+interface FlipclockProps {
+  seconds: number;
+  dark?: boolean;
+  fontSize?: boolean;
+  style?: CSSProperties;
 }
-declare const Marquee: ComponentType<MarqueeProps>
+declare const Flipclock: ComponentType<FlipclockProps>;
 
-export default Marquee
+export default Flipclock;
