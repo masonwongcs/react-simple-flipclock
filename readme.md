@@ -25,14 +25,11 @@ import Flipclock from "react-simple-marquee";
 class App extends React.Component {
   render() {
     return (
-      <Flipclock
-        speed={2} // Speed of the marquee (Optional)
-        style={{
-          height: 30 // Your own styling (Optional)
-        }}
-      >
-        Your text here
-      </Flipclock>
+      <Flipclock 
+        seconds={12 * 24 * 60 * 60} // Days up to 365 days
+        dark={true} // Optional for dark theme
+        fontSize={30} // Optional font size
+    />
     );
   }
 }
