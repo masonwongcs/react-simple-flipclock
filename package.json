@@ -1,0 +1,50 @@
+{
+  "name": "react-simple-flipclock",
+  "version": "0.0.1",
+  "description": "A simple flip clock build with React, moment, styled-components and CSS animation",
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [
+    "marquee",
+    "simple",
+    "react"
+  ],
+  "author": "masonwongcs",
+  "contributors": [
+    {
+      "name": "Mason Wong",
+      "email": "masonwongcs@gmail.com",
+      "url": "https://masonwongcs.github.io"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "styled-components": "^5.1.0"
+  },
+  "prepublish": "tsc",
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-function-bind": "^7.8.3",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-stage-0": "^7.8.3",
+    "@types/react": "^16.9.34",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masonwongcs/react-simple-flipclock"
+  },
+  "homepage": "http://react-simple-flipclock.surge.sh",
+  "typings": "types/index.d.ts"
+}
