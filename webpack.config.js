@@ -10,12 +10,20 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
       { test: /\.jsx$/, exclude: /node_modules/, loader: "babel-loader" },
       {
         test: /\.css$/,
         loader: "style-loader!css-loader"
       }
     ]
+  },
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js', '.jsx', '.css' ],
   },
   externals: {
     react: "react"

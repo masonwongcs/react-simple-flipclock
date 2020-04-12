@@ -1,6 +1,6 @@
 {
   "name": "react-simple-flipclock",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "A simple flip clock build with React, moment, styled-components and CSS animation",
   "main": "./build/index.js",
   "scripts": {
@@ -35,9 +35,12 @@
     "@babel/preset-react": "^7.7.4",
     "@babel/preset-stage-0": "^7.8.3",
     "@types/react": "^16.9.34",
+    "@types/styled-components": "^5.0.1",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.3.0",
     "style-loader": "^1.0.1",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
@@ -45,6 +48,5 @@
     "type": "git",
     "url": "https://github.com/masonwongcs/react-simple-flipclock"
   },
-  "homepage": "http://react-simple-flipclock.surge.sh",
-  "typings": "types/index.d.ts"
+  "homepage": "http://react-simple-flipclock.surge.sh"
 }
