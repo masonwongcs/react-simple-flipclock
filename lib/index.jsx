@@ -65,7 +65,7 @@ const Flipclock = ({ dark, seconds, fontSize }) => {
                 <span>0</span>
               </div>
             </div>
-            <span>:</span>
+            <span className="countdown-separator">:</span>
             <div className="countdown-timer-item">
               <div className="digit-wrapper" ref={hour1Ref}>
                 <span>9</span>
@@ -94,7 +94,7 @@ const Flipclock = ({ dark, seconds, fontSize }) => {
                 <span>0</span>
               </div>
             </div>
-            <span>:</span>
+            <span className="countdown-separator">:</span>
             <div className="countdown-timer-item">
               <div className="digit-wrapper" ref={minute1Ref}>
                 <span>9</span>
@@ -123,7 +123,7 @@ const Flipclock = ({ dark, seconds, fontSize }) => {
                 <span>0</span>
               </div>
             </div>
-            <span>:</span>
+            <span className="countdown-separator">:</span>
             <div className="countdown-timer-item">
               <div className="digit-wrapper" ref={second1Ref}>
                 <span>9</span>
@@ -185,7 +185,7 @@ const Flipclock = ({ dark, seconds, fontSize }) => {
                 <span>0</span>
               </div>
             </div>
-            <span>:</span>
+            <span className="countdown-separator">:</span>
             <div className="countdown-timer-item">
               <div className="digit-wrapper" ref={minute1Ref}>
                 <span>9</span>
@@ -214,7 +214,7 @@ const Flipclock = ({ dark, seconds, fontSize }) => {
                 <span>0</span>
               </div>
             </div>
-            <span>:</span>
+            <span className="countdown-separator">:</span>
             <div className="countdown-timer-item">
               <div className="digit-wrapper" ref={second1Ref}>
                 <span>9</span>
@@ -277,7 +277,7 @@ const Flipclock = ({ dark, seconds, fontSize }) => {
                 <span>0</span>
               </div>
             </div>
-            <span>:</span>
+            <span className="countdown-separator">:</span>
             <div className="countdown-timer-item">
               <div className="digit-wrapper" ref={second1Ref}>
                 <span>9</span>
@@ -311,7 +311,10 @@ const Flipclock = ({ dark, seconds, fontSize }) => {
     }
   };
   return (
-    <FlipclockStyled className={`countdown-timer ${dark ? " dark" : ""}`} fontSize={fontSize}>
+    <FlipclockStyled
+      className={`countdown-timer ${dark ? " dark" : ""}`}
+      fontSize={fontSize}
+    >
       {renderDigit()}
     </FlipclockStyled>
   );
