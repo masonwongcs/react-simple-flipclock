@@ -1,47 +1,49 @@
-import styled from "styled-components";
-import {
-  CountdownTimerItemStyled,
-  DigitWrapper
-} from "./CountdownTimerItem/styled";
-
-export const CountdownSeparator = styled.span`
-  box-sizing: border-box;
-`;
-export const FlipclockStyled = styled.div<{
+export const flipclockStyle = ({
+  fontSize,
+  dark
+}: {
   fontSize?: number;
   dark?: boolean;
-}>`
-  display: flex;
-  align-items: center;
-  height: ${props => (props.fontSize ? props.fontSize * 1.75 + "px" : "28px")};
-  overflow: hidden;
-  font-family: "Arial", sans-serif;
-  &.dark {
-    ${CountdownTimerItemStyled} {
-      background: rgba(0, 0, 0, 0.7);
-      color: #fff;
+}) => {
+  return `
+    .react-simple-flipclock {
+      display: flex;
+      align-items: center;
+      height: ${fontSize ? fontSize * 1.75 : 28}px;
+      overflow: hidden;
+      font-family: "Arial", sans-serif;
     }
-    ${CountdownSeparator} {
-      color: #fff;
+    .react-simple-flipclock .countdown-separator {
+      font-size: ${fontSize ? fontSize : 16}px;
+      padding: ${fontSize ? fontSize / 16 : 1}px;
+      box-sizing: border-box;
+      color: ${dark ? "#fff" : "#000"};
     }
-  }
-  ${CountdownSeparator} {
-    font-size: ${props => (props.fontSize ? props.fontSize + "px" : "16px")};
-    padding: ${props => (props.fontSize ? props.fontSize / 16 + "px" : "1px")};
-    color: ${props => (props.dark ? "#fff" : undefined)};
-  }
-  ${CountdownTimerItemStyled} {
-    background: ${props => (props.dark ? "rgba(0, 0, 0, 0.7)" : undefined)};
-    color: ${props => (props.dark ? "#fff" : undefined)};
-    width: ${props =>
-      props.fontSize ? props.fontSize * 1.125 + "px" : "18px"};
-    ${DigitWrapper} {
-      > span {
-        height: ${props =>
-          props.fontSize ? props.fontSize * 1.75 + "px" : "28px"};
-        font-size: ${props =>
-          props.fontSize ? props.fontSize + "px" : "16px"};
-      }
+    .react-simple-flipclock .countdown-timer-item {
+      background: ${dark ? "rgba(0, 0, 0, 0.7)" : "rgba(0, 0, 0, 0.2)"};
+      border-radius: 4px;
+      overflow: hidden;
+      width: ${fontSize ? fontSize * 1.25 : 18}px;
+      height: 100%;
+      position: relative;
+      box-sizing: border-box;
+      margin: 0 2px;
+      color: ${dark ? "#fff" : "#000"};
     }
-  }
-`;
+    .react-simple-flipclock .countdown-timer-item .digit-wrapper {
+      position: absolute;
+      width: 100%;
+      transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateY(-90%);
+      will-change: transform;
+    }
+    .react-simple-flipclock .countdown-timer-item .digit-wrapper > span {
+      position: relative;
+      height: ${fontSize ? fontSize * 1.75 : 28}px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: ${fontSize ? fontSize : 16}px;
+    }
+  `;
+};
