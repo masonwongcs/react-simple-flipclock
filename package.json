@@ -1,6 +1,6 @@
 {
   "name": "react-simple-flipclock",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A simple flip clock build with React, moment, styled-components and CSS animation",
   "main": "./build/index.js",
   "scripts": {
