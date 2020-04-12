@@ -1,4 +1,5 @@
 var path = require("path");
+var webpack = require("webpack");
 
 module.exports = {
   mode: "production",
@@ -28,4 +29,8 @@ module.exports = {
   externals: {
     react: "react",
   },
+  optimization: {
+    minimize: true,
+  },
+  plugins: [new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)],
 };
