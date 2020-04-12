@@ -1,4 +1,4 @@
-# react-simple-marquee
+# react-simple-flipclock
 
 A very simple Flip Clock component created by using CSS animation and React
 
@@ -6,6 +6,11 @@ A very simple Flip Clock component created by using CSS animation and React
 
 - [Installation](#installation)
 - [Usage](#usage)
+
+## Demo
+![](demo.gif)
+
+Link to demo: https://react-simple-flipclock.surge.sh
 
 ## Installation
 
@@ -20,7 +25,7 @@ Import Flip Clock component into your React component
 ```
 import * as React from "react";
 import ReactDOM from "react-dom";
-import Flipclock from "react-simple-marquee";
+import Flipclock from "react-simple-flipclock";
 
 class App extends React.Component {
   render() {
